@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">click me</button>
+    <p id="details"></p>
+    
+    <script>
+        function start(){
+            let x = +prompt("enter number: ");
+            let y = +prompt('enter number: ');
+            let z = +prompt('enter number: ');
+            let sol = x+y+z;
+            let par = document.getElementById('details');
+            par.innerText = sol;
+            if(x===y && y===z){
+                par.style.color = 'blue';
+            }
+            else{
+                par.style.color= 'red';
+            }
+        }
+
+    </script>
+
+</body>
+</html>

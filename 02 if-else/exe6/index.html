@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">click me</button>
+    <p id="details"> </p>
+    <script>
+        function start(){
+            let num = +prompt("enter num");
+            let par = document.getElementById('details');
+            if(num%2===0){
+                par.innerText = 'even';
+                par.style.color = 'blue';
+                par.style.backgroundColor = 'yellow';
+                par.style.border = '1px soild green';   
+            }
+            else{
+                par.innerText = 'odd';
+                par.style.color = 'yellow';
+                par.style.backgroundColor = 'black';
+                par.style.border = '1px soild red';   
+            }
+        }
+    </script>
+</body>
+</html>
