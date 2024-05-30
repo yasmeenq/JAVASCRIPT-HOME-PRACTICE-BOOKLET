@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            color: blue;
+            background-color: yellow;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showName('details')">Show my Name</button>
+    <p id="details"></p>
+    <script>
+        function showName(id){
+            //exe1
+            console.log("your name hehe =D");
+            //exe2
+            alert("show your name =3");
+            //exe3
+            document.getElementById(id).innerText = 'this is a name WOAH!';
+            //exe4
+            document.getElementById(id).classList.add('color');
+        }
+    </script>
+</body>
+</html>
