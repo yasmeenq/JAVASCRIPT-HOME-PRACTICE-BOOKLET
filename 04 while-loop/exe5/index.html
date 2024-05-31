@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>EXE 5</h1>
+    <button onclick="start()">start</button>
+    <p id="result"></p>
+
+    <script>
+        function start(){
+            let arr = [];
+            let x = 5;
+            while(x>0){
+                let z = +prompt('enter number: ');
+                arr.push(z);
+                x--;
+            }
+            let min = arr[0];
+            let len = arr.length-1;
+            while(len >= 0){
+                if(arr[len]<min){
+                    min = arr[len];
+                }
+                len--;
+            }
+            document.getElementById('result').innerText = `min is: ${min}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <h1>EXE 6</h1>
+    <button onclick="start()">start</button>
+    <p id="result"></p>
+
+    <script>
+        function start(){
+            let arr = [];
+            let x = 5;
+            while(x>0){
+                let z = +prompt('enter number: ');
+                arr.push(z);
+                x--;
+            }
+            let min = arr[0];
+            let minIndex = 0;
+            let len = arr.length-1; //index in array
+            let i = len
+            while(i >= 0){
+                if(arr[i]<min){
+                    min = arr[i];
+                    minIndex = i;
+                }
+                i--;
+            }
+            document.getElementById('result').innerText = `index of min: ${minIndex}`;
+        }
+
+        //Assaf's solution 
+        // function start(){
+        //     let num = parseInt(prompt("print num"));
+        //     let min = num;
+        //     let index = 0;
+        //     let i=1;
+        //     while(i<9){
+        //         num = parseInt(prompt("print num"));
+        //         if(num <= min){
+        //             min = num;
+        //             index =i;  
+        //         }
+        //         i+=1
+        //     }
+        //     console.log(index);
+        // }
+    </script>
+</body>
+</html>
