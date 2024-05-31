@@ -1,0 +1,35 @@
+<html>
+<head>
+    <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>index is odd or even </p>
+        <button onclick="evenOrOdd()">index is odd or even
+        </button>
+        <ul id="items">
+            <li>1</li>
+            <li>208</li>
+            <li>99</li>
+            <li>100</li>
+            <li>101</li>
+        </ul>
+        <script>
+            function evenOrOdd(){
+                let lst = document.querySelectorAll('#items li');
+                for(let i=0; li=lst[i]; i++){
+                    if(i%2===0){
+                        li.classList.add('green');
+                    } else {
+                        li.classList.add('red');
+                    }
+                }
+            }
+        </script>
+</body>

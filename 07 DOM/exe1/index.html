@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Red or Blue </p>
+    <button onclick="colorRedOrBlue ()">Red or Blue</button>
+    <ul id="items">
+        <li>1</li>
+        <li>208</li>
+        <li>99</li>
+    </ul>
+
+    <script>
+        function colorRedOrBlue() {
+            let items = document.querySelectorAll('#items li');
+            for (let i = 0; li = items[i]; i++) {
+                if (parseInt(li.innerText) < 100) {
+                    items[i].classList.add('red');
+                } else {
+                    items[i].classList.add('blue');
+                }
+            }
+        }
+    </script>
+    </body>
+</html>
