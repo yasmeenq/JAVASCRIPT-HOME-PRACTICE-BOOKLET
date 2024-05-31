@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">Add 5 Numbers</button>
+    <p id="max"></p>
+    <script>
+        function start(){
+            let arr = [];
+            for(let i=0; i<5;i++){
+                let num = +prompt('enter number: ');
+                arr.push(num);
+            }
+            let max = arr[0];
+            for(let i=0; i<arr.length;i++){
+                if(arr[i]>max){
+                    max = arr[i];
+                }
+            }
+            document.getElementById('max').innerText = 'max number is ' + max;            
+        }
+    </script>
+</body>
+</html>
