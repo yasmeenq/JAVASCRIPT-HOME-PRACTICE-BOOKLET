@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'Friday', 'Saturday'];
+        let restaurant = {
+            timeShift1: "8:00-16:00",
+            timeShift2: "16:00-00:00",
+            shiftsWorkers: [
+                ["Mike", "James", "John", "Michael", "William", "David"],
+                ["Joseph", "Thomas", "Charles", "Christopher", "Daniel", "Mark"],
+            ],
+            totalTipShift1: 4000,
+            totalTipShift2: 5000,
+            tipped: ["Mike", "James", "Michael", "David", "Thomas"],
+            date: "12/12/2021",
+            address: { city: "NY", street: "Arguban 6" },
+            opendays: [days[0], days[3], days[4]]
+        };
+        //EXE1 ✔ Create one worker-array for each shift
+        let [s1, s2] = restaurant.shiftsWorkers;
+        console.log(s1, s2);
+
+        // EXE2 ✔ The first worker in any shiftsWorkers array is the shiftManager 
+        // and the others are simple workers.
+        // For Mike (shift 1) create one variable ('SM')
+        // with the worker's name, and one array
+        // ('simpleWorkers') with all the remaining field
+        // workers
+        let [SM, ...simpleWorkers] = s1;
+        console.log(SM, simpleWorkers);
+
+        // EXE3 ✔ Create an array 'allWorkers' containing all workers
+        // of both shifts (12 workers)
+        let allWorkers = [...s1, ...s2];
+        console.log(allWorkers);
+
+        // EXE4 🤔 Write a function ('tipped') that receives an
+        // arbitrary number of worker names
+        // (NOT an array) and prints each of them to the console,
+        // Hint - use spread operator
+        const printTip = function (...workers) {
+            console.log(workers);
+        };
+        printTip('Mike', 'James', 'Michael', 'David', 'Thomas');
+
+        //EXE5 ✔ Loop over the restaurant.tipped array and print each
+        // worker name to the console
+        console.log('**********************');
+        let arr = restaurant.tipped;
+        for (let [key, value] of arr.entries()) {
+            console.log(key, value);
+        }
+
+        //EXE6 ✔ Use a loop to print all address properties
+        let arr2 = restaurant.address;
+        for (let [key, value] of Object.keys(arr2).entries()) {
+            console.log(key, value);
+        }
+    </script>
+</body>
+
+</html>
