@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+
+  <body>
+    <h3>Change Background Color of Textbox</h3>
+    Enter your name:
+    <input type="text" id="myInput" onblur="blurFunction(this)" onfocus='focusFunction(this)' />
+    <script>
+      function blurFunction(obj) {
+        obj.style.background = 'red';
+      }
+      function focusFunction(obj){
+        obj.style.background = 'grey';
+      }
+    </script>
+  </body>
+</html>
